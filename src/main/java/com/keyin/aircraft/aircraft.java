@@ -21,7 +21,7 @@ public class aircraft {
         this.id = id;
     }
 
-    public String getName(){
+    public String getName(String name){
         return name;
     }
 
@@ -29,7 +29,7 @@ public class aircraft {
         this.name = name;
     }
 
-    public String getCode(){
+    public String getCode(String code){
         return code;
     }
 
