@@ -1,24 +1,23 @@
 package com.keyin.aircraft;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-public class aircraft {
+public class airport {
     @Id
     @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "aircraft_sequence")
-    private long id;
+    private long airportid;
     private String name;
     private String code;
 
 
     public long getId() {
-        return id;
+        return airportid;
     }
 
     public void setId(long id){
-        this.id = id;
+        this.airportid = id;
     }
 
     public String getName(String name){
