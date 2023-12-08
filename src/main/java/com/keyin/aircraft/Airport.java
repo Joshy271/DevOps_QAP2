@@ -1,12 +1,12 @@
 package com.keyin.aircraft;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
-public class airport {
+public class Airport {
     @Id
-    @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=1)
-    @GeneratedValue(generator = "aircraft_sequence")
+    @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue=1)
+    @GeneratedValue(generator = "airport_sequence")
     private long airportid;
     private String name;
     private String code;

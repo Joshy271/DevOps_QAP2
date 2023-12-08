@@ -1,7 +1,7 @@
 version: '3'
 services:
   Dev-Ops-QAP-Rest_API:
-    image: keyin/devops_qap2:latest
+    image: joshy271/devops_qap2:latest
     ports:
       - 8080:8080
     environment:
