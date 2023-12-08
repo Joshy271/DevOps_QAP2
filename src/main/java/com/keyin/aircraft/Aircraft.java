@@ -1,11 +1,15 @@
 package com.keyin.aircraft;
 
+import com.keyin.passenger.*;
+import com.keyin.airport.*;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Aircraft {
     @Id
-    @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=1)
+    @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=8)
     @GeneratedValue(generator = "aircraft_sequence")
 
     private long aircraftid;
@@ -14,11 +18,17 @@ public class Aircraft {
     private int numPassengers;
     private String planeCode;
 
-    public long getAircraftid(){
+    @OneToMany
+    private List<Passenger> passengers;
+
+    @OneToMany
+    private List<Airport> airports;
+
+    public long getid(){
         return aircraftid;
     }
-    public void setAircraftid(long aircraftid){
-        this.aircraftid = aircraftid;
+    public void setid(long id){
+        this.aircraftid = id;
     }
 
     public String getType(){
