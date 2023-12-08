@@ -1,4 +1,4 @@
-package com.keyin.aircraft;
+package com.keyin.airport;
 
 import jakarta.persistence.*;
 
@@ -20,19 +20,19 @@ public class Airport {
         this.airportid = id;
     }
 
-    public String getName(String name){
+    public String getName(){
         return name;
     }
 
-    public void setName(){
+    public void setName(String name){
         this.name = name;
     }
 
-    public String getCode(String code){
+    public String getCode(){
         return code;
     }
 
-    public void setCode(){
+    public void setCode(String code){
         this.code = code;
     }
 }
